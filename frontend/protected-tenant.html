@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Página Protegida Multitenant</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+  <h2>Página Protegida Multitenant</h2>
+  
+  <div class="mb-3">
+    <label for="tenantId" class="form-label">Tenant ID para verificar</label>
+    <input id="tenantId" type="text" class="form-control" placeholder="ID del tenant">
+  </div>
+  
+  <button id="verifyBtn" class="btn btn-primary">Verificar Token</button>
+  <button id="logoutBtn" class="btn btn-danger ms-2">Cerrar Sesión</button>
+  
+  <div id="errorMessage" class="alert alert-danger mt-3" style="display: none;"></div>
+  <div id="successMessage" class="alert alert-success mt-3" style="display: none;"></div>
+  
+  <div id="userInfo" class="mt-4" style="display: none;">
+    <h4>Información del Usuario</h4>
+    <div class="card">
+      <div class="card-body">
+        <pre id="userData"></pre>
+      </div>
+    </div>
+  </div>
+  
+  <script src="./scripts/protected-tenant.js"></script>
+</body>
+</html> 

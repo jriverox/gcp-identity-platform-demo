@@ -14,6 +14,7 @@ app.use(express.json());
 
 app.use('/api/preregister', preregisterRoutes);
 app.use('/api/login', authRoutes);
+
 app.get('/api/protected', async (req, res) => {
   const authHeader = req.headers.authorization || '';
   // authHeader === 'Bearer eyJhbGciOiJ...'
